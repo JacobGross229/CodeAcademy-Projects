@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kotlin/Animal-Sanctuary/Animal-Sanctuary.iml" filepath="$PROJECT_DIR$/Kotlin/Animal-Sanctuary/Animal-Sanctuary.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CodeAcademy-Projects.iml" filepath="$PROJECT_DIR$/.idea/CodeAcademy-Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/Kotlin/MathMagic/MathMagic.iml" filepath="$PROJECT_DIR$/Kotlin/MathMagic/MathMagic.iml" />
       <module fileurl="file://$PROJECT_DIR$/Kotlin/Self-Grading-Quiz/Self-Grading-Quiz.iml" filepath="$PROJECT_DIR$/Kotlin/Self-Grading-Quiz/Self-Grading-Quiz.iml" />
