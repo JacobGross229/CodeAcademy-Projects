@@ -30,4 +30,18 @@ fun main() {
         println()
         triCount = 0
     }
+
+    // Use the same variables for the next triangle section
+    for (triRow in triRows downTo 1) {
+        while (triCount < triRowLen) {
+            triCount++
+            print(triChar1)
+        }
+        if ((triCount != 1) && (triCount != triRowLen) && (triRow != triRows)) {
+            print(triChar2)
+        } else {
+            print(triChar1)
+        }
+        triCount = 0
+    }
 }
