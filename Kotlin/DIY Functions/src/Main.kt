@@ -4,47 +4,43 @@ fun getListOfNumbers(): Int {
         for (i in 1..7) {
             println("Please enter a number: ")
             val answer = Integer.valueOf(readLine())
-            myList.add()
+            myList.add(numberInput)
 
         }
     return myList
 }
 
-fun findMax(): Int {
+fun findMax(myList: List<Int>): Int {
     var largestNumber = myList[0]
-
-    for (largestElement in myList) {
-        if (largestElement > largestNumber) {
-            largestNumber = largestElement
+    for (i in myList) {
+        if (i > largestNumber) {
+            largestNumber = i
         }
     }
     return largestNumber
 }
 
-fun findmin(): Int {
+fun findmin(myList: List<Int>): Int {
     var smallestNumber = myList[0]
-
-    for (smallestElement in myList) {
-        if (smallestElement < smallestNumber) {
-            smallestNumber = smallestElement
-
+    for (i in myList) {
+        if (i < smallestNumber) {
+            smallestNumber = i
         }
     }
     return smallestNumber
 }
 
-fun findAverage(): Int {
+fun findAverage(myList: List<Int>): Int {
     var sum = 0
-
-    for (averageElement in myList) {
-        averageElement + sum
+    for (i in myList) {
+        sum += i
     }
-    return sum / averageElement
+    return sum / myList.size
 }
 
-fun checkIfListContains(): Int {
-    for (listCheck in myList) {
-        if (listCheck == myList) {
+fun checkIfListContains(myList: List<Int>, numToFind: Int): Boolean {
+    for (i in myList) {
+        if (i == numToFind) {
             return true
         }
     }
@@ -52,25 +48,22 @@ fun checkIfListContains(): Int {
 }
 
 fun main() {
-    // Write more code below
     var values = getListOfNumbers()
-    var largestValue = findmax(values)
-    var smallestValue = findmin(values)
-    var average = findAverage(values)
-    var containsValue = charArrayOf(values, numToFind)
-
-    if (containsValue ) {
-        println("The values exist within the list.")
-    } else {
-        println("The value doesn't exist in the list.")
-    }
-
     println(values)
-    println("The largest number is $largestValue")
-    println("The smallest number is $smallestValue")
-    println("The average is $average")
+    var largestValue = findMax(values)
+    println("The largest number is $largestValue.")
+    var smallestValue = findMin(values)
+    println("The smallest number is $smallestValue.")
+    var average = findAverage(values)
+    println("The average is $average.")
+    println("What number should I check for?")
+    var numToFind = Integer.valueOf(readLine())
+    var containsValue = checkForValue(values, numToFind)
 
-    println("Please input a number here: ")
-    val numTofind = Integer.valueOf(readLine())
+    if (containsValue) {
+        println("$numToFind exists in the list.")
+    } else {
+        println("$numToFind does not exist in the list.")
+    }
 }
 
