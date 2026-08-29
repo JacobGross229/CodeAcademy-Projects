@@ -15,7 +15,7 @@ class Calculator(val name: String) {
         return num1 * num2
     }
 
-    fun divide(num1: Int, num2: Int): Int {
+    fun divide(num1: Int, num2: Int): Any {
         if (num2 == 0) {
             println("You cannot divide by 0!")
         } else {
